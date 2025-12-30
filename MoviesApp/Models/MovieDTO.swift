@@ -1,0 +1,33 @@
+//
+//  MovieDTO.swift
+//  MoviesApp
+//
+//  Created by gawin on 29/12/2025.
+//
+
+import Foundation
+
+struct MoviesResponseDTO: Decodable {
+    let results: [MovieDTO]
+}
+
+struct MovieDTO: Decodable {
+    let id: Int
+    let title: String
+    let overview: String
+    let posterPath: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case overview
+        case posterPath = "poster_path"
+    }
+}
+
+extension MovieDTO {
+    var posterURL: URL? {
+        guard let posterPath else { return nil }
+        return URL(string: "https://image.tmdb.org/t/p/w500\(posterPath)")
+    }
+}
