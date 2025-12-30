@@ -41,6 +41,12 @@ The app allows users to search movies using the TMDB API, view movie details, an
 ### Favourites
 ![Favourites](Screenshots/favourites.png)
 
+<p float="left">
+  <img src="Screenshots/movies_list.png" width="250" />
+  <img src="Screenshots/movie_details.png" width="250" />
+  <img src="Screenshots/favourites.png" width="250" />
+</p>
+
 ---
 
 ## Architecture
